@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_app/screens/taskPage.dart';
 import 'package:flutter_todo_app/widgets.dart';
 
 class Homepage extends StatefulWidget {
@@ -35,7 +36,7 @@ class _HomepageState extends State<Homepage> {
                         TaskCardWidget(
                           title: "Get Started",
                           description:
-                          'Hello user! Welcome to my Todo app, this is a default todo task that you can edit, save or delete. Feel free to mess around and experiment with this todo to figure out how todos works.',
+                              'Hello user! Welcome to my Todo app, this is a default todo task that you can edit, save or delete. Feel free to mess around and experiment with this todo to figure out how todos works.',
                         ),
                         TaskCardWidget(),
                         TaskCardWidget(),
@@ -44,21 +45,25 @@ class _HomepageState extends State<Homepage> {
                       ],
                     ),
                   ),
-
                 ],
               ),
               Positioned(
                 bottom: 24.0,
-                right:0.0,
-                child: Container(
-                  width: 60.0,
-                  height: 60.0,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF7349FE),
-                    borderRadius: BorderRadius.circular(20.0)
-                  ),
-                  child: Image(
-                    image: AssetImage('assets/images/add_icon.png'),
+                right: 0.0,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => TaskPage()));
+                  },
+                  child: Container(
+                    width: 60.0,
+                    height: 60.0,
+                    decoration: BoxDecoration(
+                        color: Color(0xFF7349FE),
+                        borderRadius: BorderRadius.circular(20.0)),
+                    child: Image(
+                      image: AssetImage('assets/images/add_icon.png'),
+                    ),
                   ),
                 ),
               )
