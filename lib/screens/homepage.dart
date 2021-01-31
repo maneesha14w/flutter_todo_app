@@ -11,7 +11,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(24.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
           child: Column(
             children: [
               Image(image: AssetImage('assets/images/logo.png'))
