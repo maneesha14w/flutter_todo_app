@@ -18,9 +18,18 @@ class _HomepageState extends State<Homepage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image(image: AssetImage(
-                  'assets/images/logo.png'
+              Container(
+                margin: EdgeInsets.only(
+                  bottom: 32.0,
+                ),
+                child: Image(
+                  image: AssetImage('assets/images/logo.png'),
+                ),
               ),
+              TaskCardWidget(
+                title: "Get Started",
+                description:
+                    'Hello user! Welcome to my Todo app, this is a default todo task that you can edit, save or delete',
               ),
               TaskCardWidget(),
             ],
