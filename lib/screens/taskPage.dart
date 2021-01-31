@@ -15,7 +15,7 @@ class _TaskPageState extends State<TaskPage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(24.0),
+                  padding: const EdgeInsets.only(top: 24.0, bottom: 6.0,),
                   child: Row(
                     children: [
                       InkWell(
@@ -42,6 +42,16 @@ class _TaskPageState extends State<TaskPage> {
                             color: Color(0xFF211551)),
                       ))
                     ],
+                  ),
+
+                ),//Action Bar
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Enter Description For Task...",
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 24.0,
+                    )
                   ),
                 )
               ],
