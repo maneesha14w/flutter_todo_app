@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_app/widgets.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -11,10 +12,15 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          width: double.infinity,
           padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
           child: Column(
             children: [
-              Image(image: AssetImage('assets/images/logo.png'))
+              Image(image: AssetImage(
+                  'assets/images/logo.png'
+              ),
+              ),
+              TaskCardWidget(),
             ],
           ),
         ),
