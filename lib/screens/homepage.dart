@@ -15,23 +15,42 @@ class _HomepageState extends State<Homepage> {
           color: Color(0xFFF6F6F6),
           width: double.infinity,
           padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
             children: [
-              Container(
-                margin: EdgeInsets.only(
-                  bottom: 32.0,
-                ),
-                child: Image(
-                  image: AssetImage('assets/images/logo.png'),
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(
+                      bottom: 32.0,
+                    ),
+                    child: Image(
+                      image: AssetImage('assets/images/logo.png'),
+                    ),
+                  ),
+                  TaskCardWidget(
+                    title: "Get Started",
+                    description:
+                        'Hello user! Welcome to my Todo app, this is a default todo task that you can edit, save or delete',
+                  ),
+                  TaskCardWidget(),
+                ],
               ),
-              TaskCardWidget(
-                title: "Get Started",
-                description:
-                    'Hello user! Welcome to my Todo app, this is a default todo task that you can edit, save or delete',
-              ),
-              TaskCardWidget(),
+              Positioned(
+                bottom: 0.0,
+                right:0.0,
+                child: Container(
+                  width: 60.0,
+                  height: 60.0,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF7349FE),
+                    borderRadius: BorderRadius.circular(20.0)
+                  ),
+                  child: Image(
+                    image: AssetImage('assets/images/add_icon.png'),
+                  ),
+                ),
+              )
             ],
           ),
         ),

@@ -22,7 +22,7 @@ class TaskCardWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            title ?? ("(Unamed Task)") ,
+            title ?? ("Unamed Task") ,
             style: TextStyle(
               color: Color(0xFF211551),
               fontSize: 22.0,
