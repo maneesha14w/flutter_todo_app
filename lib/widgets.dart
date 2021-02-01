@@ -94,4 +94,10 @@ class TodoWidget extends StatelessWidget {
   }
 }
 
+class NoGlow extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
+  }
+}
 
