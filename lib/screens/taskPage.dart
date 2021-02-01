@@ -47,16 +47,23 @@ class _TaskPageState extends State<TaskPage> {
                   ),
 
                 ),//Action Bar
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Enter Description For Task...",
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.symmetric(
-                      horizontal: 24.0,
-                    )
+                Padding(
+                  padding: EdgeInsets.only(bottom: 12.0,),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "Enter Description For Task...",
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.symmetric(
+                        horizontal: 24.0,
+                      )
+                    ),
                   ),
                 ),
-                TodoWidget(),
+                TodoWidget(text: "Finish learning flutter" , isDone: true,),
+                TodoWidget(text: "Start learning machine learning",  isDone: false,),
+                TodoWidget(text: "Brush up Java", isDone: true,),
+                TodoWidget(text: "Learn android development", isDone: true,),
+                TodoWidget(isDone: false,),
               ],
             ),
           ),
