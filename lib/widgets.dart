@@ -52,8 +52,30 @@ class TodoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
-        "Hello World!"
+      padding: EdgeInsets.symmetric(
+        horizontal: 24.0,
+        vertical: 8.0,
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 20.0,
+            height: 20.0,
+            margin: EdgeInsets.only(
+              right: 12.0,
+            ),
+            decoration: BoxDecoration(
+              color: Color(0xFF7349FE),
+              borderRadius: BorderRadius.circular(6.0)
+            ),
+            child: Image(
+              image: AssetImage('assets/images/check_icon.png'),
+            ),
+          ),
+          Text(
+            "Hello World!"
+          ),
+        ],
       ),
     );
   }
