@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_app/databaseHelper.dart';
 import 'package:flutter_todo_app/widgets.dart';
 
 class TaskPage extends StatefulWidget {
@@ -38,6 +39,12 @@ class _TaskPageState extends State<TaskPage> {
                                 child: TextField(
                                   onSubmitted: (value) {
                                     print("Field value: $value");
+                                    
+                                    if(value != ""){
+                                      DatabaseHelper _dbHelper = DatabaseHelper();
+                                    }
+
+
                                   },
                                 decoration: InputDecoration(
                                 hintText: 'Enter Task Title...',
