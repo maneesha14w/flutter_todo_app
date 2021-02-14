@@ -13,12 +13,12 @@ class DatabaseHelper {
           "CREATE TABLE task(id INTEGER PRIMARY KEY, name TEXT, description TEXT)",
         );
       },
+      version: 1,
     );
   }
 
   Future<void> insertTask(Task task) async{
     Database _db = await db();
     await _db.insert('tasks', task.toMap(), conflictAlgorithm: ConflictAlgorithm.replace);
-
   }
 }
